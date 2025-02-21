@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogue Cover CV - Marielle Bucheit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: white;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('A32525AB-10A1-48F4-B20A-449AFD2A4611_1_105_c.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cover-title {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            display: inline-block;
+            font-size: 1.5em;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .content {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+    </style>
+    <script>
+        function showSection(section) {
+            document.getElementById(section).style.display = 'block';
+        }
+        function closeSection(section) {
+            document.getElementById(section).style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="cover-title">VOGUE | The Summer Edition</div>
+    <div class="links">
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('education')">Education</a>
+        <a href="#" onclick="showSection('experience')">Experience</a>
+        <a href="#" onclick="showSection('skills')">Skills & Strengths</a>
+        <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+        <a href="#" onclick="showSection('contact')">Contact Me</a>
+    </div>
+    
+    <div id="about" class="content">
+        <span class="close" onclick="closeSection('about')">&times;</span>
+        <h2>About Me</h2>
+        <p>Adaptable and diligent student with a passion for communications and media.</p>
+    </div>
+    <div id="education" class="content">
+        <span class="close" onclick="closeSection('education')">&times;</span>
+        <h2>Education</h2>
+        <p>Université de Montréal - Bachelor’s in Communications</p>
+    </div>
+    <div id="experience" class="content">
+        <span class="close" onclick="closeSection('experience')">&times;</span>
+        <h2>Experience</h2>
+        <p>The Brand is Female - Communications Intern</p>
+    </div>
+    <div id="skills" class="content">
+        <span class="close" onclick="closeSection('skills')">&times;</span>
+        <h2>Skills & Strengths</h2>
+        <p>Social Media, Content Creation, Teamwork, Leadership</p>
+    </div>
+    <div id="portfolio" class="content">
+        <span class="close" onclick="closeSection('portfolio')">&times;</span>
+        <h2>Portfolio</h2>
+        <p>Check out my work and projects.</p>
+    </div>
+    <div id="contact" class="content">
+        <span class="close" onclick="closeSection('contact')">&times;</span>
+        <h2>Contact Me</h2>
+        <p>Email: mariellebucheit2004@gmail.com</p>
+    </div>
+</body>
+</html>
